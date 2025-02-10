@@ -5,6 +5,7 @@ namespace VSC\API;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
+use Symfony\Component\Yaml\Yaml;
 
 class ViruscampAPI
 {
@@ -12,10 +13,13 @@ class ViruscampAPI
     private $baseUri;
     private $authToken;
 
-    public function __construct(string $baseUri, string $authToken = null)
+    public function __construct()
     {
-        $this->baseUri = $baseUri;
-        $this->authToken = $authToken;
+        
+        $config = Yaml::parseFile(__DIR__ . '/../../resources/config/viruscamp.yml');
+        $this->baseUri = $config['api']['baseUri'];
+        $this->authToken = $config['api']['authToken'];
+
         $this->client = new Client([
             'base_uri' => $this->baseUri,
             'timeout' => 30.0
