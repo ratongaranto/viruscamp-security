@@ -1,0 +1,20 @@
+{
+  "name": "mon-vendor/mon-package",
+  "description": "VirusCamp",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ratongaranto anthony",
+      "email": "anthony@softibox.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "VSC\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.4"
+  }
+}
