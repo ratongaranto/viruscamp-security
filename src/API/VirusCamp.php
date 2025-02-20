@@ -12,7 +12,7 @@ use GuzzleHttp\Psr7\Utils;
 /**
  * Classe principale pour gérer les appels API à VirusCamp
  */
-class virusCamp
+class VirusCamp
 {
     protected Client $client;
     protected string $baseUri;
