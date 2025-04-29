@@ -1,0 +1,5 @@
+api:
+    baseUri: "xxxxx"
+    authToken: "xxxxx"
+    username: "xxxxx"
+    password: "xxxxx"
